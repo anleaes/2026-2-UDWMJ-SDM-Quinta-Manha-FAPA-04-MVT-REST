@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig', 
+    'diagnostico.apps.DiagnosticoConfig',
+    'historico.apps.HistoricoConfig'
 
 ]
 
