@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core.apps.CoreConfig', 
     'diagnostico.apps.DiagnosticoConfig',
-    'historico.apps.HistoricoConfig'
+    
 
 ]
 

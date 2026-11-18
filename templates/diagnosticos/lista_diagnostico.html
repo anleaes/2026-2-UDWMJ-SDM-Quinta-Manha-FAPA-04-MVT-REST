@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lista de diagnostico 
+{% endblock %}
+
+{% block body %}
+
+<table border = "1">
+ <thead>
+  <tr>
+    <th>Id</th>
+    <th>Descrição</th>
+    <th>Data</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  {% for diagnostico in diagnosticos %}
+  <tr>
+    <th>{{ diagnostico.id }}</th>
+    <th>{{ diagnostico.descricao }}</th>
+    <th>{{ diagnostico.data }}</th>
+  </tr>
+  {% endfor %}
+
+ </tbody>
+
+</table>
+
+{% endblock %}
