@@ -44,6 +44,10 @@ def delete_historico(request,id_historico):
     historico.delete()
     return redirect('core:home')
 
+def menu_historico(request):
+    template_name = 'historicos/menu_historico.html'
+    context = {}
+    return render(request, template_name, context)
 
 
 
