@@ -43,3 +43,8 @@ def delete_diagnostico(request,id_diagnostico):
     diagnostico = Diagnostico.objects.get(id=id_diagnostico)
     diagnostico.delete()
     return redirect('diagnosticos:list_diagnostico')
+
+def menu_diagnostico(request):
+    template_name="diagnosticos/menu_diagnostico.html"
+    context = {}
+    return render(request, template_name, context)

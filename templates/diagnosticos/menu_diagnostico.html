@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+Adicionar Diagnostico - {{ block.super }}
+
+{% endblock %}
+
+{% block body %}
+
+<a href="{% url 'diagnosticos:add_diagnostico' %}"><button>Adicionar</button></a>
+<a href="{% url 'diagnosticos:list_diagnostico' %}"><button>Lista</button></a>
+
+{% endblock %}

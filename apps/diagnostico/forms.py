@@ -6,3 +6,4 @@ class DiagnosticoForm(forms.ModelForm):
   class Meta:
     model = Diagnostico
     exclude = ()
+    
