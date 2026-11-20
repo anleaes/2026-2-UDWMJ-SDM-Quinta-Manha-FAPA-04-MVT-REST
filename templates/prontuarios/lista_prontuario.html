@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+Lista de Prontuario - {{ block.super }}
+
+{% endblock %}
+
+{% block body %}
+
+<b>Lista</b>
+<table border = "1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tipo Sanguinio</th>
+            <th>Alergias</th>
+            <th>Historico Familiar</th>
+        </tr>
+    </thead>
+</table>
+
+<tbody>
+    {% for prontuario in prontuario %}
+    <tr>
+        <th>{{ prontuario.id }}</th>
+        <th>{{ prontuario.tipo_sanguinio }}</th>
+        <th>{{ prontuario.alergias }}</th>
+        <th>{{ prontuario.historico_familiar }}</th>
+    </tr>
+    {% endfor %}
+</tbody>
+
+{% endblock %}
