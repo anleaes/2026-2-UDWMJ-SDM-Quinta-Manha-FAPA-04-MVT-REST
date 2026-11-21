@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adicionar Paciente
+{% endblock %}
+
+{% block body %}
+
+<form action = "" method = "POST">
+    {% csrf_token %}
+
+    <label>Nome</label>
+    {{ form.nome }}
+    <br>
+    <label>CPF</label>
+    {{ form.cpf }}
+    <br>
+    <label>Telefone</label>
+    {{ form.telefone }}
+    <br>
+    <label>Endereço</label>
+    {{ form.endereco }}
+    <br>
+    <button type="submit">Enviar</button>
+
+</form>
+
+{% endblock %}
