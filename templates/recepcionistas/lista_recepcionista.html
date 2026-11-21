@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lista
+{% endblock %}
+
+{% block body %}
+
+<table border = "1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>CPF</th>
+            <th>Turno</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for recepcionista in recepcionistas %}
+        <tr>
+            <th>{{ recepcionista.id }}</th>
+            <th>{{ recepcionista.nome }}</th>
+            <th>{{ recepcionista.telefone }}</th>
+            <th>{{ recepcionista.cpf }}</th>
+            <th>{{ recepcionista.turno }}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

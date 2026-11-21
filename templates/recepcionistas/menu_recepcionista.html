@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Menu
+{% endblock %}
+
+{% block body %}
+
+<a href="{% url 'recepcionistas:add_recepcionista' %}"><button>Adicionar</button></a>
+<a href="{% url 'recepcionistas:list_recepcionista' %}"><button>Lista</button></a>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adicionar Recepcionista
+{% endblock %}
+
+{% block body %}
+
+<form action = "" method = "POST">
+{% csrf_token %}
+
+<label>Nome</label>
+{{ form.nome }}
+<br>
+<label>Telefone</label>
+{{ form.telefone }}
+<br>
+<label>CPF</label>
+{{ form.cpf }}
+<br>
+<label>Turno</label>
+{{ form.turno }}
+<br>
+<button type ="submit">Enviar</button>
+
+</form>
+
+{% endblock %}
