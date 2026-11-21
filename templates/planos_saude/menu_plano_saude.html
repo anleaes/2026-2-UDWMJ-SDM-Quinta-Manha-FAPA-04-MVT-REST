@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Menu
+{% endblock %}
+
+{% block body %}
+
+<a href="{% url 'planos_saude:add_plano_saude' %}"><button>Adicionar</button></a>
+<a href="{% url 'planos_saude:list_plano_saude' %}"><button>Lista</button></a>
+
+{% endblock %}

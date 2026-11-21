@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lista
+{% endblock %}
+
+{% block body %}
+
+<table border = "1">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome do Plano</th>
+        <th>Numero de identificação</th>
+        <th>Validade</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for plano_saude in planos_saude %}
+    <tr>
+        <th>{{ plano_saude.id }}</th>
+        <th>{{ plano_saude.nome }}</th>
+        <th>{{ plano_saude.numero }}</th>
+        <th>{{ plano_saude.validade }}</th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock %}
