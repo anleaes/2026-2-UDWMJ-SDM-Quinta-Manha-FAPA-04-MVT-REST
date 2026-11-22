@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+ <a href = "{% url 'consultas:add_consulta' %}"><button>Adicionar</button></a>
+ <a href= "{% url 'consultas:list_consulta' %}"><button>Lista</button></a>
+
+{% endblock %}

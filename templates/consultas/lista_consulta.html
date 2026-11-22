@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lista 
+{% endblock %}
+
+{% block body %}
+
+<table border = "1">
+   <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tipo</th>
+        <th>Horario</th>
+        <th>Data</th>
+    </tr>
+   </thead>
+
+   <tbody>
+    {% for consulta in consultas %}
+    <tr>
+      <th>{{ consulta.id }}</th>
+      <th>{{ consulta.tipo }}</th>
+      <th>{{ consulta.horario }}</th>
+      <th>{{ consulta.data }}</th>
+
+    </tr>
+    {% endfor %}
+   </tbody>
+
+</table>
+
+{% endblock %}
