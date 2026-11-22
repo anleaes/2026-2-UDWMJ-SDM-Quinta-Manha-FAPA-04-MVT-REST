@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Menu
+{% endblock %}
+
+{% block body %}
+
+<a href="{% url 'exames:add_exame' %}"><button>Adicionar</button></a>
+<a href="{% url 'exames:list_exame' %}"><button>Lista</button></a>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lista 
+{% endblock %}
+
+{% block body %}
+
+<table border = "1">
+   <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tipo</th>
+        <th>Status</th>
+        <th>Data</th>
+        <th>Observações</th>
+        <th>Laudo</th>
+    </tr>
+   </thead>
+
+   <tbody>
+    {% for exame in exames %}
+    <tr>
+      <th>{{ exame.id }}</th>
+      <th>{{ exame.tipo }}</th>
+      <th>{{ exame.status }}</th>
+      <th>{{ exame.data }}</th>
+      <th>{{ exame.obs }}</th>
+      <th>{{ exame.laudo }}</th>
+    </tr>
+    {% endfor %}
+   </tbody>
+
+</table>
+
+{% endblock %}
