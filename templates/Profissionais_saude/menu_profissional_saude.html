@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Menu
+{% endblock %}
+
+{% block body %}
+
+<a href="{% url 'profissionais_saude:add_profissional_saude' %}"><button>Adicionar</button></a>
+<a href="{% url 'profissionais_saude:list_profissional_saude' %}"><button>Lista</button></a>
+
+{% endblock %}
