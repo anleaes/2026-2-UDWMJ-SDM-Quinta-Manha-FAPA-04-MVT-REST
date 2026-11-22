@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adicionar 
+{% endblock %}
+
+{% block body %}
+
+<form action = "" method = "POST">
+    {% csrf_token %}
+
+    <label>Numero</label>
+    {{ form.numero }}
+    <br>
+    <label>Status</label>
+    {{ form.status }}
+    <br>
+    <label>Setor</label>
+    {{ form.setor }}
+    <br>
+    <button type="submit">Enviar</button>
+
+</form>
+
+{% endblock %}

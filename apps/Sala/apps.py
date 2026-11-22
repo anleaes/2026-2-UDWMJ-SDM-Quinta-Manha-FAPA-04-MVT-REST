@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class SalaConfig(AppConfig):
-    name = 'Sala'
+    name = 'sala'
+    verbose_name = 'salas'

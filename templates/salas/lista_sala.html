@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lista 
+{% endblock %}
+
+{% block body %}
+
+<table border = "1">
+   <thead>
+    <tr>
+        <th>ID</th>
+        <th>Numero</th>
+        <th>Status</th>
+        <th>Setor</th>
+    </tr>
+   </thead>
+
+   <tbody>
+    {% for sala in salas %}
+    <tr>
+      <th>{{ sala.id }}</th>
+      <th>{{ sala.numero }}</th>
+      <th>{{ sala.status }}</th>
+      <th>{{ sala.setor }}</th>
+    </tr>
+    {% endfor %}
+   </tbody>
+
+</table>
+
+{% endblock %}
