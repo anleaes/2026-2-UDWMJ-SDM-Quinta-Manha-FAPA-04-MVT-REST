@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adicionar 
+{% endblock %}
+
+{% block body %}
+
+<form action = "" method = "POST">
+    {% csrf_token %}
+
+    <label>Chamado</label>
+    {{ form.chamado }}
+    <br>
+    <label>Horario</label>
+    {{ form.horario }}
+    <br>
+    <label>Data</label>
+    {{ form.data }}
+    <br>
+    <button type="submit">Enviar</button>
+
+</form>
+
+{% endblock %}

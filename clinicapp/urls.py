@@ -22,6 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls', namespace='core')),
+    path('agendamentos/', include('agendamento.urls', namespace='agendamentos')),
     
 ]
 
