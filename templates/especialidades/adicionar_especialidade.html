@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adicionar Especialidade
+{% endblock %}
+
+{% block body %}
+
+<form action = "" method = "POST">
+    {% csrf_token %}
+
+    <label>Tipo</label>
+    {{ form.tipo }}
+    <br>
+    <label>Pre Requisitos</label>
+    {{ form.prerequisito }}
+    <br>
+    <label>Status</label>
+    {{ form.status }}
+    <br>
+    <button type="submit">Enviar</button>
+
+</form>
+
+{% endblock %}

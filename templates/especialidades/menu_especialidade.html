@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Menu
+{% endblock %}
+
+{% block body %}
+
+<a href = "{% url 'especialidades:add_especialidade' %}"><button>Adicionar</button></a>
+<a href = "{% url 'especialidades:list_especialidade' %}"><button>Lista</button></a>
+
+{% endblock %}
