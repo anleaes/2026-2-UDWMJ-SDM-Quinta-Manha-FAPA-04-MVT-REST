@@ -46,7 +46,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig', 
+<<<<<<< HEAD
     'agendamento.apps.AgendamentoConfig',
+=======
+    'consulta.apps.ConsultaConfig',
+>>>>>>> d227187401f66be01adf473ac71c2aa0960a8e83
 
 ]
 

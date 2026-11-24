@@ -22,8 +22,12 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls', namespace='core')),
+<<<<<<< HEAD
     path('agendamentos/', include('agendamento.urls', namespace='agendamentos')),
     
+=======
+    path('consulta/', include('consulta.urls', namespace='consultas')),
+>>>>>>> d227187401f66be01adf473ac71c2aa0960a8e83
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
