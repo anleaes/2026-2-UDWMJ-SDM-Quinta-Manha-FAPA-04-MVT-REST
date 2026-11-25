@@ -6,7 +6,36 @@ Lista de Historico
 
 {% block body %}
 
-<b>Lista</b>
+<head>
+ <style>
+    body {
+     place-items: center;
+   }
+
+   label {
+    display: block;
+    text-align: center;
+    transform: translateY(40px);
+    position: relative;
+    z-index: 2;
+  
+   }
+
+   table {
+     width: 90%;
+     transform: translateY(20px);
+     border: 2px solid #000000;
+     padding: 20px 1px;
+     background-color: white;
+     
+   }
+
+ </style>
+</head>
+
+<body>
+<br>
+<label>Lista de historico</label>    
 <table border = "1">
 <thead>
   <tr>
@@ -29,5 +58,7 @@ Lista de Historico
 </tbody>
 
 </table>
+
+</body>
 
 {% endblock %}
