@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig', 
+    'especialidade.apps.EspecialidadeConfig',
     'exame.apps.ExameConfig',
     'sala.apps.SalaConfig',
     'agendamento.apps.AgendamentoConfig',
