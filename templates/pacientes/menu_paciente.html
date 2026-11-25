@@ -5,7 +5,34 @@
 {% endblock %}
 
 {% block body %}
+<head>
+    <style>
+       .bot{
+        width: 30%;
+        transform:translateX(115%)
+       }
+
+       label{
+        margin: 41%;
+        border: 2px solid #000;
+        padding: 1px 64px;
+        background-color: white;
+       
+       }
+
+    </style>
+</head>
+
+<body>
+<br>
+<label>Pacientes</label> 
+<br>
+
+<div class = "bot">
  <a href = "{% url 'pacientes:add_paciente' %}"><button>Adicionar</button></a>
  <a href= "{% url 'pacientes:list_paciente' %}"><button>Lista</button></a>
+</div>
+
+</body>
 
 {% endblock %}
