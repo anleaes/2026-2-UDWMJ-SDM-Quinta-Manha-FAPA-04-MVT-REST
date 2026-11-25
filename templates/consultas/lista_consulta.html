@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lista 
+{% endblock %}
+
+{% block body %}
+
+<head>
+ <style>
+    body {
+     place-items: center;
+   }
+
+   label {
+    display: block;
+    text-align: center;
+    transform: translateY(40px);
+    position: relative;
+    z-index: 2;
+  
+   }
+
+   table {
+     width: 90%;
+     transform: translateY(20px);
+     border: 2px solid #000000;
+     padding: 20px 1px;
+     background-color: white;
+     
+   }
+
+ </style>
+</head>
+
+<body>
+  <br>
+  <label>Lista de consultas</label>
+<table border = "1">
+   <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tipo</th>
+        <th>Horario</th>
+        <th>Data</th>
+    </tr>
+   </thead>
+
+   <tbody>
+    {% for consulta in consultas %}
+    <tr>
+      <th>{{ consulta.id }}</th>
+      <th>{{ consulta.tipo }}</th>
+      <th>{{ consulta.horario }}</th>
+      <th>{{ consulta.data }}</th>
+
+    </tr>
+    {% endfor %}
+   </tbody>
+
+</table>
+
+</body>
+
+{% endblock %}
