@@ -46,10 +46,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig', 
-    'historico.apps.HistoricoConfig'
+    'diagnostico.apps.DiagnosticoConfig',
+    'historico.apps.HistoricoConfig',
     'prontuario.apps.ProntuarioConfig',
     'paciente.apps.PacienteConfig',
-    'plano_saude.apps.PlanoSaudeConfig'
+    'plano_saude.apps.PlanoSaudeConfig',
     'recepcionista.apps.RecepcionistaConfig',
     'profissional_saude.apps.ProfissionalSaudeConfig',
     'especialidade.apps.EspecialidadeConfig',

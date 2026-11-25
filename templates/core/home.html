@@ -24,15 +24,8 @@
     </header>
 
     <div class = "botoes">
-      <a href="#" ><button>Diagnostico</button></a>
+       <a href="{% url 'diagnosticos:menu_diagnostico' %}" ><button>Diagnostico</button></a>
       <a href="{% url 'pacientes:menu_paciente' %}" ><button>Paciente</button></a>
-      <a href="#" ><button>Plano de Saude</button></a>
-      <a href="#" ><button>Profissional de Saude</button></a>
-      <a href="#" ><button>Especialidade</button></a>
-      <a href="#" ><button>Consulta</button></a>
-      <a href="#" ><button>Agendamento</button></a>
-      <a href="#" ><button>Recepcionista</button></a>
-      <a href="#" ><button>Paciente</button></a>
       <a href="{% url 'planos_saude:menu_plano_saude' %}" ><button>Plano de Saude</button></a>
       <a href="{% url 'profissionais_saude:menu_profissional_saude' %}" ><button>Profissional de Saude</button></a>
       <a href="{% url 'especialidades:menu_especialidade' %}" ><button>Especialidade</button></a>
@@ -42,10 +35,7 @@
       <a href="{% url 'prontuarios:menu_prontuario' %}" ><button>Prontuario</button></a>
       <a href="{% url 'historicos:menu_historico'%}" ><button>Historico</button></a>
       <a href="{% url 'salas:menu_sala' %}" ><button>Sala</button></a>
-      <a href="#" ><button>Setor</button></a>
       <a href="{% url 'exames:menu_exame' %}" ><button>Exame</button></a>
-      <a href="#" ><button>Resultado do Exame</button></a>
-      <a href="#" ><button>Exame</button></a>
     </div>
 
     <br>
