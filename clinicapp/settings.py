@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig', 
-    'plano_saude.apps.PlanoSaudeConfig'
+    'plano_saude.apps.PlanoSaudeConfig',
     'recepcionista.apps.RecepcionistaConfig',
     'profissional_saude.apps.ProfissionalSaudeConfig',
     'especialidade.apps.EspecialidadeConfig',
