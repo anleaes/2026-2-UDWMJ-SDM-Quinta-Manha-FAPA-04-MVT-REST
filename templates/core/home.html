@@ -8,6 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/arquivo_com_estilos.css' %}">
     <title>{% block title %}Clinica App{% endblock title %}</title>
+</head>
+<body>
+    <header>
+        <h1>Clinica App</h1>
+
+    </header>
+
     <style>
         label {
             display: block;
@@ -24,6 +31,7 @@
     </header>
 
     <div class = "botoes">
+      <a href="{% url 'diagnosticos:menu_diagnostico' %}" ><button>Diagnostico</button></a>
        <a href="{% url 'diagnosticos:menu_diagnostico' %}" ><button>Diagnostico</button></a>
       <a href="{% url 'pacientes:menu_paciente' %}" ><button>Paciente</button></a>
       <a href="{% url 'planos_saude:menu_plano_saude' %}" ><button>Plano de Saude</button></a>
@@ -36,6 +44,7 @@
       <a href="{% url 'historicos:menu_historico'%}" ><button>Historico</button></a>
       <a href="{% url 'salas:menu_sala' %}" ><button>Sala</button></a>
       <a href="{% url 'exames:menu_exame' %}" ><button>Exame</button></a>
+
     </div>
 
     <br>
