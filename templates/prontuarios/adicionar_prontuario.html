@@ -7,25 +7,52 @@ Adicionar Prontuario - {{ block.super }}
 {% endblock %}
 
 {% block body %}
-<br>
-<a href = "{% url 'prontuarios:add_prontuario'%}"></a> Adicionar Prontuario </a>
-<br>
+<head>
+<style>
+    body {
+        place-items: center;
+
+    }
+    form {
+        width: 30%;
+        line-height: 150%;
+        transform: translateY(100px);
+        border: 2px solid#000000;
+        border-radius: 4px;
+        padding: 12px 20px;
+        background-color: white;
+    }
+</style>
+</head>
+
+<body>
 <form action = "" method = "POST">
     {% csrf_token %}
-
+     
+    <label style ="font-weight: bold">Prontuario</label> 
+    <br>
+    <label style="font-weight: lighter;font-size: 12px;">Insira as Informações do prontuario</label>
+    <br>
+    <br>
     <label>Tipo Sanguinio</label>
     <br>
     {{ form.tipo_sanguineo }}
     <br>
+    <br>
     <label>Alergias</label>
+    <br>
     {{ form.alergias }}
     <br>
+    <br>
     <label>Historico Familiar</label>
+    <br>
     {{ form.historico_familiar }}
     <br>
     <br>
     <button type ="submit">Enviar</button>
 
 </form>
+
+</body>
 
 {% endblock %}
