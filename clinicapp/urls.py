@@ -22,6 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls', namespace='core')),
+    path('profissionais_saude/', include('profissional_saude.urls', namespace='profissionais_saude')),
     path('especialidades/', include('especialidade.urls', namespace = 'especialidades')),
     path('exames/', include('exame.urls', namespace='exames')),
     path('salas/', include('sala.urls', namespace='salas')),
