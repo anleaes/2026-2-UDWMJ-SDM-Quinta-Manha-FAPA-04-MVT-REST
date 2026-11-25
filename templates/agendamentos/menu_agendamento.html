@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+<head>
+    <style>
+       .bot{
+        width: 30%;
+        transform:translateX(115%)
+       }
+
+       label{
+        margin: 41%;
+        border: 2px solid #000;
+        padding: 1px 64px;
+        background-color: white;
+       
+       }
+
+    </style>
+</head>
+
+<body>
+<br>
+<label>Agendamentos</label> 
+<br>
+
+<div class = "bot">
+ <a href = "{% url 'agendamentos:add_agendamento' %}"><button>Adicionar</button></a>
+ <a href= "{% url 'agendamentos:list_agendamento' %}"><button>Lista</button></a>
+ </div>
+
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adicionar Profissional de Saude
+{% endblock %}
+
+{% block body %}
+<head>
+<style>
+    body {
+        place-items: center;
+
+    }
+    form {
+        width: 30%;
+        line-height: 150%;
+        transform: translateY(100px);
+        border: 2px solid#000000;
+        border-radius: 4px;
+        padding: 12px 20px;
+        background-color: white;
+    }
+</style>
+</head>
+
+<body>
+<form action = "" method = "POST">
+    {% csrf_token %}
+
+    <label style ="font-weight: bold">Profissional de Saude</label> 
+    <br>
+    <label style="font-weight: lighter;font-size: 12px;">Insira as Informações do profissional de saude</label>
+    <br>
+    <br>
+    <label>Nome</label>
+    <br>
+    {{ form.nome }}
+    <br>
+    <br>
+    <label>CPF</label>
+    <br>
+    {{ form.cpf }}
+    <br>
+    <br>
+    <label>Telefone</label>
+    <br>
+    {{ form.telefone }}
+    <br>
+    <br>
+    <label>Data de Nascimento</label>
+    <br>
+    {{ form.data }}
+    <br>
+    <br>
+    <br>
+    <button type="submit">Enviar</button>
+
+</form>
+</body>
+
+{% endblock %}
