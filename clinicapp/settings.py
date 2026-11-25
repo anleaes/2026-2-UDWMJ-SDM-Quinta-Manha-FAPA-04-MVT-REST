@@ -46,10 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig', 
-<<<<<<< HEAD
     'diagnostico.apps.DiagnosticoConfig',
-    
-=======
     'historico.apps.HistoricoConfig'
     'prontuario.apps.ProntuarioConfig',
     'paciente.apps.PacienteConfig',
@@ -61,7 +58,6 @@ INSTALLED_APPS = [
     'sala.apps.SalaConfig',
     'agendamento.apps.AgendamentoConfig',
     'consulta.apps.ConsultaConfig',
->>>>>>> 33481b0e0dc523c28d17a7531a579a4a911cc349
 
 ]
 

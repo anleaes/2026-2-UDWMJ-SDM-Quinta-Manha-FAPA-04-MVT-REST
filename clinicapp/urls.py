@@ -22,10 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls', namespace='core')),
-<<<<<<< HEAD
     path('diagnosticos/', include('diagnostico.urls', namespace='diagnosticos')),
-    
-=======
     path('historicos/', include('historico.urls', namespace='historicos')),
     path('prontuarios/', include('prontuario.urls', namespace='prontuario')),
     path('pacientes/', include('paciente.urls', namespace='pacientes')),
@@ -37,7 +34,6 @@ urlpatterns = [
     path('salas/', include('sala.urls', namespace='salas')),
     path('agendamentos/', include('agendamento.urls', namespace='agendamentos')),
     path('consulta/', include('consulta.urls', namespace='consultas')),
->>>>>>> 33481b0e0dc523c28d17a7531a579a4a911cc349
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
