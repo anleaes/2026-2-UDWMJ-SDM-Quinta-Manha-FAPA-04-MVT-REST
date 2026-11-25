@@ -7,8 +7,34 @@ Adicionar Diagnostico - {{ block.super }}
 {% endblock %}
 
 {% block body %}
+<head>
+    <style>
+       .bot{
+        width: 30%;
+        transform:translateX(115%)
+       }
 
+       label{
+        margin: 41%;
+        border: 2px solid #000;
+        padding: 1px 64px;
+        background-color: white;
+       
+       }
+
+    </style>
+</head>
+
+<body>
+<br>
+<label>Diagnosticos</label> 
+<br>
+
+<div class = "bot">
 <a href="{% url 'diagnosticos:add_diagnostico' %}"><button>Adicionar</button></a>
 <a href="{% url 'diagnosticos:list_diagnostico' %}"><button>Lista</button></a>
+</div>
+
+</body>
 
 {% endblock %}

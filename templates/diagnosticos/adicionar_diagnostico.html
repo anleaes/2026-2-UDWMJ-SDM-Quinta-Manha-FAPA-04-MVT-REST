@@ -7,19 +7,43 @@ Adicionar Diagnostico - {{ block.super }}
 {% endblock %}
 
 {% block body %}
-<br />
-<a href ="{% url 'diagnosticos:add_diagnostico' %}"></a> Adicionar Diagnostico </a>
-<br />
+<head>
+<style>
+    body {
+        place-items: center;
+
+    }
+    form {
+        width: 30%;
+        line-height: 150%;
+        transform: translateY(100px);
+        border: 2px solid#000000;
+        border-radius: 4px;
+        padding: 12px 20px;
+        background-color: white;
+    }
+</style>
+</head>
+
+<body>
+
 <form action = "" method ="POST">
  {% csrf_token %}
  
+ <label style ="font-weight: bold">Diagnostico</label> 
+ <br>
+ <label style="font-weight: lighter;font-size: 12px;">Insira as Informações do diagnostico</label>
+ <br>
+ <br>
  <label>Descrição</label>
  <br>
  {{ form.descricao }}
  <br>
+ <br>
  <label>Data</label>
  <br>
  {{ form.data }}
+ <br>
  <br>
  <br>
  <button type="submit">Enviar</button>
