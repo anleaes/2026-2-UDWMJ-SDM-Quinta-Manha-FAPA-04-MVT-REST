@@ -8,6 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/arquivo_com_estilos.css' %}">
     <title>{% block title %}Clinica App{% endblock title %}</title>
+    <style>
+        label {
+            display: block;
+            text-align: center;
+            
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -17,21 +25,36 @@
 
     <div class = "botoes">
       <a href="#" ><button>Diagnostico</button></a>
-      <a href="#" ><button>Paciente</button></a>
+      <a href="{% url 'pacientes:menu_paciente' %}" ><button>Paciente</button></a>
       <a href="#" ><button>Plano de Saude</button></a>
       <a href="#" ><button>Profissional de Saude</button></a>
       <a href="#" ><button>Especialidade</button></a>
       <a href="#" ><button>Consulta</button></a>
       <a href="#" ><button>Agendamento</button></a>
       <a href="#" ><button>Recepcionista</button></a>
+      <a href="#" ><button>Paciente</button></a>
+      <a href="{% url 'planos_saude:menu_plano_saude' %}" ><button>Plano de Saude</button></a>
+      <a href="{% url 'profissionais_saude:menu_profissional_saude' %}" ><button>Profissional de Saude</button></a>
+      <a href="{% url 'especialidades:menu_especialidade' %}" ><button>Especialidade</button></a>
+      <a href="{% url 'recepcionistas:menu_recepcionista'%}"><button>Recepcionista</button></a>
+      <a href="{% url 'consultas:menu_consulta' %}" ><button>Consulta</button></a>
+      <a href="{% url 'agendamentos:menu_agendamento' %}" ><button>Agendamento</button></a>
       <a href="{% url 'prontuarios:menu_prontuario' %}" ><button>Prontuario</button></a>
       <a href="#" ><button>Historico</button></a>
-      <a href="#" ><button>Sala</button></a>
+      <a href="{% url 'salas:menu_sala' %}" ><button>Sala</button></a>
       <a href="#" ><button>Setor</button></a>
-      <a href="#" ><button>Exame</button></a>
+      <a href="{% url 'exames:menu_exame' %}" ><button>Exame</button></a>
       <a href="#" ><button>Resultado do Exame</button></a>
+      <a href="#" ><button>Exame</button></a>
     </div>
-    
+
+    <br>
+    <br>
+    <label>
+    <label style="font-size: 35px;font-weight:bold">Registre as suas informações <br> da sua clinica com o Clinica App</label>
+    <br>
+    <label style="font-size: 18px">Projeto de software de arquitetura de microserviços <br> que utiliza o banco de dados oracle para armazenar as informações da sua clinica</label>
+    </label>
     {% block body %}
     
     {% endblock body %}
