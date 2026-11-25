@@ -25,6 +25,7 @@ urlpatterns = [
     path('diagnosticos/', include('diagnostico.urls', namespace='diagnosticos')),
     path('historicos/', include('historico.urls', namespace='historicos')),
     path('prontuarios/', include('prontuario.urls', namespace='prontuario')),
+    path('diagnostico/', include('diagnostico.urls', namespace='dignostico')),
     path('pacientes/', include('paciente.urls', namespace='pacientes')),
     path('planodesaude/', include('plano_saude.urls', namespace='planodesaude')),
     path('recepcionistas/',include('recepcionista.urls', namespace='recepcionistas')),
