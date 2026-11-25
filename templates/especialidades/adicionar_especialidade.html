@@ -6,20 +6,51 @@ Adicionar Especialidade
 
 {% block body %}
 
+<head>
+<style>
+    body {
+        place-items: center;
+
+    }
+    form {
+        width: 30%;
+        line-height: 150%;
+        transform: translateY(100px);
+        border: 2px solid#000000;
+        border-radius: 4px;
+        padding: 12px 20px;
+        background-color: white;
+    }
+</style>
+</head>
+
+<body>
 <form action = "" method = "POST">
     {% csrf_token %}
 
+    <label style ="font-weight: bold">Especialidade</label> 
+    <br>
+    <label style="font-weight: lighter;font-size: 12px;">Insira as Informações da especialidade</label>
+    <br>
+    <br>
     <label>Tipo</label>
+    <br>
     {{ form.tipo }}
     <br>
+    <br>
     <label>Pre Requisitos</label>
+    <br>
     {{ form.prerequisito }}
     <br>
+    <br>
     <label>Status</label>
+    <br>
     {{ form.status }}
+    <br>
     <br>
     <button type="submit">Enviar</button>
 
 </form>
+</body>
 
 {% endblock %}
