@@ -5,23 +5,54 @@ Adicionar Plano de Saude
 {% endblock %}
 
 {% block body %}
+<head>
+<style>
+    body {
+        place-items: center;
 
+    }
+    form {
+        width: 30%;
+        line-height: 150%;
+        transform: translateY(100px);
+        border: 2px solid#000000;
+        border-radius: 4px;
+        padding: 12px 20px;
+        background-color: white;
+    }
+</style>
+</head>
 
+<body>
 <form action = "" method = "POST">
     {% csrf_token %}
 
+    <label style ="font-weight: bold">Plano de saude</label> 
+    <br>
+    <label style="font-weight: lighter;font-size: 12px;">Insira as Informações do plano de saude</label>
+    <br>
+    <br>
     <label>Nome do Plano</label>
+    <br>
     {{ form.nome }}
     <br>
+    <br>
     <label>Numero de identificação</label>
+    <br>
     {{ form.numero }}
     <br>
+    <br>
     <label>Validade</label>
+    <br>
     {{ form.validade }}
+    <br>
+    <br>
     <br>
     <button type="submit">Enviar</button>
 
 </form>
+
+</body>
 
 
 {% endblock %}
