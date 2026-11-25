@@ -47,6 +47,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core.apps.CoreConfig', 
     'plano_saude.apps.PlanoSaudeConfig'
+    'recepcionista.apps.RecepcionistaConfig',
+    'profissional_saude.apps.ProfissionalSaudeConfig',
+    'especialidade.apps.EspecialidadeConfig',
+    'exame.apps.ExameConfig',
+    'sala.apps.SalaConfig',
+    'agendamento.apps.AgendamentoConfig',
+    'consulta.apps.ConsultaConfig',
 
 ]
 

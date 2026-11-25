@@ -24,6 +24,13 @@ urlpatterns = [
     path('', include('core.urls', namespace='core')),
     path('planodesaude/', include('plano_saude.urls', namespace='planodesaude')),
     
+    path('recepcionistas/',include('recepcionista.urls', namespace='recepcionistas')),
+    path('profissionais_saude/', include('profissional_saude.urls', namespace='profissionais_saude')),
+    path('especialidades/', include('especialidade.urls', namespace = 'especialidades')),
+    path('exames/', include('exame.urls', namespace='exames')),
+    path('salas/', include('sala.urls', namespace='salas')),
+    path('agendamentos/', include('agendamento.urls', namespace='agendamentos')),
+    path('consulta/', include('consulta.urls', namespace='consultas')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
