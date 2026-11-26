@@ -17,6 +17,7 @@ class Agendamento(models.Model):
     class Meta:
         verbose_name = 'agendamento'
         verbose_name_plural = 'agendamentos'
+        ordering = ['id']
 
 def __str__(self):
-    return f'{self.id} - {self.name}'
+    return f'{self.chamado} - {self.profissional_saude} - {self.paciente}'

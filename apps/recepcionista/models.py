@@ -11,7 +11,8 @@ class Recepcionista(models.Model):
     class Meta:
         verbose_name = 'recepcionista'
         verbose_name_plural = 'recepcionistas'
+        ordering = ['id']
 
-def __str__(self):
-    return f'{self.nome}'
+    def __str__(self):
+     return f'{self.nome}'
     
