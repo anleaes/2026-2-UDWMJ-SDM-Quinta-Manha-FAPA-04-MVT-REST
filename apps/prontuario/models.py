@@ -1,4 +1,5 @@
 from django.db import models
+from paciente.models import Paciente
 
 # Create your models here.
 
@@ -6,6 +7,7 @@ class Prontuario(models.Model):
     tipo_sanguineo = models.CharField('Sangue', max_length=1)
     alergias = models.CharField('Alergias', max_length=40)
     historico_familiar = models.CharField('Historico Familiar', max_length=40)
+    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'Prontuario'
