@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adicionar Paciente
+{% endblock %}
+
+{% block body %}
+<head>
+
+<body>
+<style>
+    body {
+        place-items: center;
+
+    }
+    form {
+        width: 30%;
+        line-height: 150%;
+        transform: translateY(100px);
+        border: 2px solid#000000;
+        border-radius: 4px;
+        padding: 12px 20px;
+        background-color: white;
+    }
+</style>
+</head>
+
+<form action = "" method = "POST">
+    {% csrf_token %}
+     <label style ="font-weight: bold">Paciente</label> 
+    <br>
+    <label style="font-weight: lighter;font-size: 12px;">Insira as Informações do paciente</label>
+    <br>
+    <br>
+    <label>Nome</label>
+    <br>
+    {{ form.nome }}
+    <br>
+    <br>
+    <label>CPF</label>
+    <br>
+    {{ form.cpf }}
+    <br>
+    <br>
+    <label>Telefone</label>
+    <br>
+    {{ form.telefone }}
+    <br>
+    <br>
+    <label>Endereço</label>
+    <br>
+    {{ form.endereco }}
+    <br>
+    <br>
+    <label>Plano de saude</label>
+    <br>
+    {{ form.plano_saude }}
+    <br>
+    <br>
+    <br>
+    <button type="submit">Enviar</button>
+
+</form>
+
+{% endblock %}
