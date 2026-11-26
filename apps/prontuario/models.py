@@ -14,6 +14,6 @@ class Prontuario(models.Model):
         verbose_name_plural = 'Prontuarios'
         ordering = ['id']
 
-def __str__(self):
-    return f'{self.paciente} - Tipo Sanguineo:{self.tipo_sanguineo}'
+    def __str__(self):
+     return f'{self.paciente} - Tipo Sanguineo:{self.tipo_sanguineo}'
 
