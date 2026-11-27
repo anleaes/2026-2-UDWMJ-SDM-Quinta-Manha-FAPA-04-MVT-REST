@@ -44,17 +44,19 @@ Lista de Prontuario - {{ block.super }}
             <th>Tipo Sanguinio</th>
             <th>Alergias</th>
             <th>Historico Familiar</th>
+            <th>Paciente</th>
         </tr>
     </thead>
 
 
 <tbody>
-    {% for prontuario in prontuario %}
+    {% for prontuario in prontuarios %}
     <tr>
         <th>{{ prontuario.id }}</th>
-        <th>{{ prontuario.tipo_sanguinio }}</th>
+        <th>{{ prontuario.tipo_sanguineo }}</th>
         <th>{{ prontuario.alergias }}</th>
         <th>{{ prontuario.historico_familiar }}</th>
+        <th>{{ prontuario.paciente }}</th>
     </tr>
     {% endfor %}
 </tbody>
