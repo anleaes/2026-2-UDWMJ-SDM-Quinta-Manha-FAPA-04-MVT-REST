@@ -31,3 +31,8 @@ def menu_plano_saude(request):
     context = {}
     return render(request, template_name, context)
 
+def delete_plano_saude(request, id_planosaude):
+    plano_saude = Plano_saude.objects.get(id=id_planosaude)
+    plano_saude.delete()
+    return redirect('planos_saude:list_plano_saude')
+
