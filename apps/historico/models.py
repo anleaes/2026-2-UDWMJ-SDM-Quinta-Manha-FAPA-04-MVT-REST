@@ -1,6 +1,7 @@
 from django.db import models
 from prontuario.models import Prontuario
 
+
 # Create your models here.
 
 class Historico(models.Model):
@@ -14,5 +15,5 @@ class Historico(models.Model):
         verbose_name_plural = 'Historicos'
         ordering = ['id']
 
-def __str__(self):
- return f'{self.id}'
+    def __str__(self):
+     return f'{self.risco}'
