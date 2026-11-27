@@ -52,6 +52,7 @@ Lista
         <th>{{ plano_saude.nome }}</th>
         <th>{{ plano_saude.numero }}</th>
         <th>{{ plano_saude.validade }}</th>
+        <a href="{% url 'planos_saude:delete_plano_saude' %}"
     </tr>
     {% endfor %}
   </tbody>
