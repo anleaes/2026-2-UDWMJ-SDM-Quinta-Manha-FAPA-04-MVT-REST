@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
 Lista
 {% endblock %}
@@ -42,6 +44,7 @@ Lista
         <th>Nome do Plano</th>
         <th>Numero de identificação</th>
         <th>Validade</th>
+        <th></th>
     </tr>
   </thead>
 
@@ -52,7 +55,7 @@ Lista
         <th>{{ plano_saude.nome }}</th>
         <th>{{ plano_saude.numero }}</th>
         <th>{{ plano_saude.validade }}</th>
-        <a href="{% url 'planos_saude:delete_plano_saude' %}"
+        <th><a href="{% url 'planos_saude:delete_plano_saude' plano_saude.id %}" ><img src="{% static 'img\x.png' %}"/></a></th>
     </tr>
     {% endfor %}
   </tbody>
