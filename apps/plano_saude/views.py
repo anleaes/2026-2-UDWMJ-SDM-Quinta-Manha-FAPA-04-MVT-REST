@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from .forms import Plano_saudeForm
 from .models import Plano_saude
 
@@ -35,4 +35,17 @@ def delete_plano_saude(request, id_planosaude):
     plano_saude = Plano_saude.objects.get(id=id_planosaude)
     plano_saude.delete()
     return redirect('planos_saude:list_plano_saude')
+
+def edit_plano_saude(request, id_planosaude):
+    template_name = 'planos_saude/add_plano_saude.html'
+    context ={}
+    plano_saude = get_object_or_404(Plano_saude, id=id_planosaude)
+    if request.method == 'POST':
+        form = Plano_saudeForm(request.POST, instance=plano_saude)
+        if form.is_valid():
+            form.save()
+            return redirect('planos_saude:list_plano_saude')
+    form = Plano_saudeForm(instance=plano_saude)
+    context ['form'] = form
+    return render(request, template_name, context)
 
