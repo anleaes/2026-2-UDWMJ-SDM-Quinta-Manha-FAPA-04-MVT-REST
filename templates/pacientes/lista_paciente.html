@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Lista Paciente
@@ -56,6 +57,7 @@ Lista Paciente
       <th>{{ paciente.telefone }}</th>
       <th>{{ paciente.endereco }}</th>
       <th>{{ paciente.plano_saude }}</th>
+      <th><a href="{% url 'pacientes:delete_paciente' paciente.id %}"><img src="{% static 'img\deleta.png' %}" width="30px" height="30px"></a></th>
 
     </tr>
     {% endfor %}
