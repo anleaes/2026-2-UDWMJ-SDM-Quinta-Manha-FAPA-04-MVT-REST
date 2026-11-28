@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Lista 
@@ -53,6 +54,8 @@ Lista
       <th>{{ sala.numero }}</th>
       <th>{{ sala.status }}</th>
       <th>{{ sala.setor }}</th>
+      <th><a href="{% url 'salas:delete_sala' sala.id %}"><img src="{% static 'img/deleta.png' %}" width="30px" height="30px"></a></th>
+      <th><a href="{% url 'salas:edit_sala' sala.id %}"><img src="{% static 'img/edit.png' %}" width="30px" height="30px"></a></th>
     </tr>
     {% endfor %}
    </tbody>
