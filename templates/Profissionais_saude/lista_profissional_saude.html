@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
 Lista
 {% endblock %}
@@ -56,7 +58,8 @@ Lista
         <th>{{ profissional_saude.cpf }}</th>
         <th>{{ profissional_saude.telefone }}</th>
         <th>{{ profissional_saude.data }}</th>
-        <th>{{ profissionais_saude.especialidade }}</th>
+        <th>{{ profissional_saude.especialidade }}</th>
+        <th><a href="{% url 'profissionais_saude:delete_profissional_saude' profissional_saude.id %}"><img src="{% static 'img\deleta.png' %}" width="30px" height="30px"></a></th>
     </tr>
     {% endfor %}
   </tbody>
