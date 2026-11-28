@@ -30,3 +30,8 @@ def menu_sala(request):
     template_name = 'salas/menu_sala.html'
     context = {}
     return render(request, template_name, context)
+
+def delete_sala(request, id_sala):
+    sala = Sala.objects.get(id=id_sala)
+    sala.delete
+    return redirect('salas:list_sala')
