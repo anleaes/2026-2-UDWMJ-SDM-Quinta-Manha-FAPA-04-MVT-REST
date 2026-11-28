@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Lista
@@ -55,6 +56,7 @@ Lista
             <th>{{ recepcionista.telefone }}</th>
             <th>{{ recepcionista.cpf }}</th>
             <th>{{ recepcionista.turno }}</th>
+            <th><a href="{% url 'recepcionistas:delete_recepcionista' recepcionista.id %}"><img src="{% static 'img\deleta.png' %}" width="30px" height="30px"></a></th>
         </tr>
         {% endfor %}
     </tbody>
