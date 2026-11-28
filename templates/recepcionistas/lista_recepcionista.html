@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Lista
+{% endblock %}
+
+{% block body %}
+
+<head>
+ <style>
+    body {
+     place-items: center;
+   }
+
+   label {
+    display: block;
+    text-align: center;
+    transform: translateY(40px);
+    position: relative;
+    z-index: 2;
+  
+   }
+
+   table {
+     width: 90%;
+     transform: translateY(20px);
+     border: 2px solid #000000;
+     padding: 20px 1px;
+     background-color: white;
+     
+   }
+
+ </style>
+</head>
+
+<body>
+<br>
+<label>Lista de recepcionistas</label>    
+<table border = "1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>CPF</th>
+            <th>Turno</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for recepcionista in recepcionistas %}
+        <tr>
+            <th>{{ recepcionista.id }}</th>
+            <th>{{ recepcionista.nome }}</th>
+            <th>{{ recepcionista.telefone }}</th>
+            <th>{{ recepcionista.cpf }}</th>
+            <th>{{ recepcionista.turno }}</th>
+            <th><a href="{% url 'recepcionistas:delete_recepcionista' recepcionista.id %}"><img src="{% static 'img\deleta.png' %}" width="30px" height="30px"></a></th>
+            <th><a href="{% url 'recepcionistas:edit_recepcionista' recepcionista.id %}"><img src="{% static 'img\edit.png' %}" width="30px" height="30px"></a></th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+
+{% endblock %}

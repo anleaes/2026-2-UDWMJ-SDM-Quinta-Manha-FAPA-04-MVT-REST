@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Lista
+{% endblock %}
+
+{% block body %}
+<head>
+ <style>
+    body {
+     place-items: center;
+   }
+
+   label {
+    display: block;
+    text-align: center;
+    transform: translateY(40px);
+    position: relative;
+    z-index: 2;
+  
+   }
+
+   table {
+     width: 90%;
+     transform: translateY(20px);
+     border: 2px solid #000000;
+     padding: 20px 1px;
+     background-color: white;
+     
+   }
+
+ </style>
+</head>
+
+<body>
+<br>
+<label>Lista de planos de saude</label>    
+<table border = "1">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome do Plano</th>
+        <th>Numero de identificação</th>
+        <th>Validade</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for plano_saude in planos_saude %}
+    <tr>
+        <th>{{ plano_saude.id }}</th>
+        <th>{{ plano_saude.nome }}</th>
+        <th>{{ plano_saude.numero }}</th>
+        <th>{{ plano_saude.validade }}</th>
+        <th><a href="{% url 'planos_saude:delete_plano_saude' plano_saude.id %}" ><img src="{% static 'img\deleta.png' %} " width="30px" height="30px"/></a></th>
+        <th><a href="{% url 'planos_saude:edit_plano_saude' plano_saude.id %}" ><img src="{% static 'img\edit.png' %} " width="30px" height="30px "/></a></th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</body>
+
+
+{% endblock %}
