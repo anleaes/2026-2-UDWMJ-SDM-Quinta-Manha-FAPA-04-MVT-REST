@@ -30,4 +30,9 @@ def menu_recepcionista(request):
     template_name = 'recepcionistas/menu_recepcionista.html'
     context = {}
     return render(request, template_name, context)
+
+def delete_recepcionista(request, id_recepcionista):
+    recepcionista = Recepcionista.objects.get(id=id_recepcionista)
+    recepcionista.delete()
+    return redirect('recepcionistas:list_recepcionista')
     
