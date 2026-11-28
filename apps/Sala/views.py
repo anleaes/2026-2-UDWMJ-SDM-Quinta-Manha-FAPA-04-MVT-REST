@@ -33,5 +33,5 @@ def menu_sala(request):
 
 def delete_sala(request, id_sala):
     sala = Sala.objects.get(id=id_sala)
-    sala.delete
+    sala.delete()
     return redirect('salas:list_sala')

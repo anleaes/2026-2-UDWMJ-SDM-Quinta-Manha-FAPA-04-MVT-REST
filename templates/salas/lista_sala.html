@@ -54,7 +54,7 @@ Lista
       <th>{{ sala.numero }}</th>
       <th>{{ sala.status }}</th>
       <th>{{ sala.setor }}</th>
-      <th><a href="{% url 'salas:delete_sala' id_sala %}"><img src="{% static 'img/deleta.png' %}" width="30px" height="30px"></a></th>
+      <th><a href="{% url 'salas:delete_sala' sala.id %}"><img src="{% static 'img/deleta.png' %}" width="30px" height="30px"></a></th>
     </tr>
     {% endfor %}
    </tbody>
