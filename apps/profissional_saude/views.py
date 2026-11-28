@@ -30,3 +30,8 @@ def menu_profissional_saude(request):
     template_name = 'profissionais_saude/menu_profissional_saude.html'
     context = {}
     return render(request, template_name, context)
+
+def delete_profissional_saude(request, id_profissional_saude):
+    profissional_saude = Profissional_saude.objects.get(id=id_profissional_saude)
+    profissional_saude.delete()
+    return redirect('profissionais_saude:list_profissional_saude')
