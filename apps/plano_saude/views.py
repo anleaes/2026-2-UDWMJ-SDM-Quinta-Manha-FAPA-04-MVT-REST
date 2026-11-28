@@ -37,7 +37,7 @@ def delete_plano_saude(request, id_planosaude):
     return redirect('planos_saude:list_plano_saude')
 
 def edit_plano_saude(request, id_planosaude):
-    template_name = 'planos_saude/add_plano_saude.html'
+    template_name = 'planos_saude/adicionar_plano_saude.html'
     context ={}
     plano_saude = get_object_or_404(Plano_saude, id=id_planosaude)
     if request.method == 'POST':
