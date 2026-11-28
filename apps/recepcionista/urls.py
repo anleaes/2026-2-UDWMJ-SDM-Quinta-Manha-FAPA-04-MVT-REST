@@ -8,4 +8,5 @@ urlpatterns = [
     path('lista/', views.list_recepcionista, name='list_recepcionista'),
     path('menu/', views.menu_recepcionista, name='menu_recepcionista'),
     path('deletar/<int:id_recepcionista>/', views.delete_recepcionista, name='delete_recepcionista'),
+    path('editar/<int:id_recepcionista>/', views.edit_recepcionista, name='edit_recepcionista'),
 ]
