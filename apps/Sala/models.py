@@ -13,4 +13,4 @@ class Sala(models.Model):
         ordering = ['id']
 
     def __str__(self):
-        return f'{self.numero} - {self.setor}'
+        return f'Sala {self.numero}|Setor {self.setor}'

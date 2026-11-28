@@ -43,16 +43,19 @@ Lista de Historico
     <th>Evolucao</th>
     <th>Tipo</th>
     <th>Risco</th>
+    <th>Prontuario</th>
   </tr>
 </thead>
 
 <tbody>
 {% for historico in historicos %}
+
 <tr>
     <th>{{ historico.id }}</th>
     <th>{{ historico.evolucao }}</th>
     <th>{{ historico.tipo }}</th>
     <th>{{ historico.risco }}</th>
+    <th>{{ historico.prontuario }}</th>
 </tr>
 {% endfor %}
 </tbody>
