@@ -44,7 +44,7 @@ def edit_recepcionista(request, id_recepcionista):
         form = RecepcionistaForm(request.POST, instance=recepcionista)
         if form.is_valid():
             form.save()
-            return redirect('planos_saude:list_plano_saude')
+            return redirect('recepcionistas:list_recepcionista')
     form = RecepcionistaForm(instance=recepcionista)
     context ['form'] = form
     return render(request, template_name, context)
