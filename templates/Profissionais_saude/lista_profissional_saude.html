@@ -60,6 +60,7 @@ Lista
         <th>{{ profissional_saude.data }}</th>
         <th>{{ profissional_saude.especialidade }}</th>
         <th><a href="{% url 'profissionais_saude:delete_profissional_saude' profissional_saude.id %}"><img src="{% static 'img\deleta.png' %}" width="30px" height="30px"></a></th>
+        <th><a href="{% url 'profissionais_saude:edit_profissional_saude' profissional_saude.id %}"><img src="{% static 'img\edit.png' %}" width="30px" height="30px"></a></th>
     </tr>
     {% endfor %}
   </tbody>
