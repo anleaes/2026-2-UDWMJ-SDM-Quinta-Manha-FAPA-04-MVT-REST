@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
 Lista
 {% endblock %}
@@ -53,6 +55,7 @@ Lista
             <th>{{ especialidade.tipo }}</th>
             <th>{{ especialidade.prerequisito }}</th>
             <th>{{ especialidade.status }}</th>
+            <th><a href="{% url 'especialidades:delete_especialidade' especialidade.id %}"><img src="{% static 'img\deleta.png' %}" width="30px" height="30px"></a></th>
         </tr>
         {% endfor %}
     </tbody>
