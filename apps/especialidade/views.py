@@ -30,3 +30,8 @@ def menu_especialidade(request):
     template_name = 'especialidades/menu_especialidade.html'
     context = {}
     return render(request, template_name, context)
+
+def delete_especialidade(request, id_especialidade):
+    especialidade = Especialidade.objects.get(id=id_especialidade)
+    especialidade.delete()
+    return redirect('especialidades:list_especialidade')
