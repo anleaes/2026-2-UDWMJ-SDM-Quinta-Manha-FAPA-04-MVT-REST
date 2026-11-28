@@ -55,8 +55,12 @@ Lista
         <th>{{ plano_saude.nome }}</th>
         <th>{{ plano_saude.numero }}</th>
         <th>{{ plano_saude.validade }}</th>
+<<<<<<< HEAD
+        
+=======
         <th><a href="{% url 'planos_saude:delete_plano_saude' plano_saude.id %}" ><img src="{% static 'img\deleta.png' %} " width="30px" height="30px"/></a></th>
         <th><a href="{% url 'planos_saude:edit_plano_saude' plano_saude.id %}" ><img src="{% static 'img\edit.png' %} " width="30px" height="30px "/></a></th>
+>>>>>>> c4861de23b3f704942ee75c003172fb0294eaea5
     </tr>
     {% endfor %}
   </tbody>

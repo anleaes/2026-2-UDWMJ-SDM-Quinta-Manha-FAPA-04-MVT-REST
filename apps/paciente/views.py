@@ -31,3 +31,7 @@ def menu_paciente(request):
     context = {}
     return render(request, template_name, context)
 
+def delete_paciente(request, id_paciente):
+    paciente = Paciente.objects.get(id=id_paciente)
+    paciente.delete()
+    return redirect('pacientes:list_paciente')
